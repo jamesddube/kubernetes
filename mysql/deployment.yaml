@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-mysql
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  replicas: 2 # deployment runs 2 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:8
+        ports:
+        - containerPort: 3306 #Endpoint is at port 3306 in the container
