@@ -5,7 +5,7 @@ metadata:
 spec:
   type: NodePort #Exposes the service as a node port
   ports:
-  - port: 83306
+  - port: 33306
     protocol: TCP
     targetPort: 3306
   selector:
