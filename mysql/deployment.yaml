@@ -18,3 +18,10 @@ spec:
         env: 
         - name: "MYSQL_ROOT_PASSWORD"
           value: "@Pass123"
+        volumeMounts:
+        - name: mysqldata
+          mountPath: /var/lib/mysql
+      volumes:
+      - name: mysqldata
+        hostPath: 
+          path: /var/mysqldata
