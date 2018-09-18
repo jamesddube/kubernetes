@@ -6,7 +6,7 @@ spec:
   type: NodePort #Exposes the service as a node port
   ports:
   - port: 3306
-    nodePort: 43306
+    nodePort: 33306
     protocol: TCP
   selector:
     app: mysql
